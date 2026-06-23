@@ -48,4 +48,3 @@ unsigned int Span::longestSpan() const {
     int maxSpan = *std::max_element(_numbers.begin(), _numbers.end());
     return static_cast<unsigned int>(maxSpan - minSpan);
 }
-
