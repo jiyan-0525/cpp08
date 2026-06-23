@@ -26,9 +26,26 @@ void Span::addNumber(int number) {
 unsigned int Span::shortestSpan() const {
     if (_numbers.size() < 2) {
         throw std::runtime_error("Not enough numbers in span");
-
-        int minSpan = *std::min_element(_numbers.begin(), _numbers.end());
-        int maxSpan = *std::max_element(_numbers.begin(), _numbers.end());
-        return static_cast<unsigned int>(maxSpan - minSpan);
     }
+        std::vector<int> sortedNumbers = _numbers;
+        std::sort(sortedNumbers.begin(), sortedNumbers.end());
+        unsigned int minSpan = std::numeric_limits<unsigned int>::max();
+
+        for (size_t i = 1; i < sortedNumbers.size(); ++i) {
+            unsigned int span = static_cast<unsigned int>(sortedNumbers[i] - sortedNumbers[i - 1]);
+            if (span < minSpan) {
+                minSpan = span;
+            }
+        }
+        return minSpan;
 }
+
+unsigned int Span::longestSpan() const {
+    if (_numbers.size() < 2) {
+        throw std::runtime_error("Not enough numbers in span");
+    }
+    int minSpan = *std::min_element(_numbers.begin(), _numbers.end());
+    int maxSpan = *std::max_element(_numbers.begin(), _numbers.end());
+    return static_cast<unsigned int>(maxSpan - minSpan);
+}
+
