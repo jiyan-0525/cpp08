@@ -44,7 +44,7 @@ int main()
     }
 
     try {
-        std::list<int>::iterator it = easyfind(lis, 160);
+        std::list<int>::iterator it = easyfind(lis, 50);
         std::cout << "Value found for list: " << *it << std::endl;
     } catch (const std::exception &e) {
         std::cerr << e.what() << std::endl;
