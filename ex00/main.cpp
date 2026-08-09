@@ -37,7 +37,7 @@ int main()
     std::cout << std::endl;
 
     try {
-        std::vector<int>::iterator it = easyfind(vec, 3);
+        std::vector<int>::iterator it = easyfind(vec, 7);
         std::cout << "Value found for vector: " << *it << std::endl;
     } catch (const std::exception &e) {
         std::cerr << e.what() << std::endl;

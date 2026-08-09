@@ -16,7 +16,7 @@ int main() {
     for (int i = 0; i < 10000; ++i) {
         numbers.push_back(i * 2);
     }
-    sp2.addRange(numbers.begin(), numbers.end());
+    sp2.addNumber(numbers.begin(), numbers.end());
 
     std::cout << "Shortest span in large span: " << sp2.shortestSpan() << std::endl;
     std::cout << "Longest span in large span: " << sp2.longestSpan() << std::endl;

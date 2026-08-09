@@ -14,7 +14,7 @@ private:
 
 public:
     template <typename T>
-    void addRange(T first, T last);
+    void addNumber(T first, T last);
 
     Span();
     Span(unsigned int n);
@@ -28,7 +28,7 @@ public:
 };
 
 template <typename T>
-void Span::addRange(T first, T last) {
+void Span::addNumber(T first, T last) {
     if (_numbers.size() + std::distance(first, last) > _maxsize) {
         throw std::runtime_error("Adding this range would exceed the maximum size of the span");
 }
