@@ -29,7 +29,7 @@ unsigned int Span::shortestSpan() const {
     }
         std::vector<int> sortedNumbers = _numbers;
         std::sort(sortedNumbers.begin(), sortedNumbers.end());
-        unsigned int minSpan = std::numeric_limits<unsigned int>::max();
+        unsigned int minSpan = UINT_MAX;
 
         for (size_t i = 1; i < sortedNumbers.size(); ++i) {
             unsigned int span = static_cast<unsigned int>(sortedNumbers[i] - sortedNumbers[i - 1]);

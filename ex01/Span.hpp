@@ -2,7 +2,7 @@
 # define SPAN_HPP
 #include <iostream>
 #include <vector>
-#include <limits>
+#include <climits>
 #include <exception>
 #include <algorithm>
 
