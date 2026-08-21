@@ -1,11 +1,10 @@
-#ifndef MUTANTSTACK_HPP
-# define MUTANTSTACK_HPP
-#include <iostream>
+#pragma once
+
 #include <stack>
+#include <iostream>
 #include <iterator>
 
 template <typename T>
-
 class MutantStack : public std::stack<T>
 {
 public:
@@ -29,5 +28,3 @@ public:
 };
 
 #include "MutantStack.tpp"
-
-#endif

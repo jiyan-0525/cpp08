@@ -32,7 +32,8 @@ unsigned int Span::shortestSpan() const {
         unsigned int minSpan = UINT_MAX;
 
         for (size_t i = 1; i < sortedNumbers.size(); ++i) {
-            unsigned int span = static_cast<unsigned int>(sortedNumbers[i] - sortedNumbers[i - 1]);
+            unsigned int span = static_cast<unsigned int>(
+            static_cast<long>(sortedNumbers[i]) - static_cast<long>(sortedNumbers[i - 1]));
             if (span < minSpan) {
                 minSpan = span;
             }

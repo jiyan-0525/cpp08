@@ -1,5 +1,4 @@
-#ifndef SPAN_HPP
-# define SPAN_HPP
+#pragma once
 #include <iostream>
 #include <vector>
 #include <climits>
@@ -34,5 +33,3 @@ void Span::addNumber(T first, T last) {
 }
     _numbers.insert(_numbers.end(), first, last);
 }
-
-#endif
