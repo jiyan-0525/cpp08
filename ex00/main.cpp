@@ -6,7 +6,7 @@ int main()
     std::vector<int> vec = {1, 2, 3, 4, 5};
     vec.push_back(6);
     // vec.push_front(0); // std::vector does not have push_front method
-    // vec.at(5) = 6; // Set the seventh element to 6
+    vec.at(5) = 6; // Set the seventh element to 6
 
     std::list<int> lis = {10, 20, 30, 40, 50};
     lis.push_back(60);
@@ -16,9 +16,9 @@ int main()
 
     std::deque<int> deq = {100, 200, 300, 400, 500};
     deq.push_back(600);
-    // deq.push_front(0);
-    // deq.pop_back();
-    // deq.pop_front();
+    deq.push_front(0);
+    deq.pop_back();
+    deq.pop_front();
     deq.at(4) = 600; // Set the seventh element to 600
 
     std::cout << "Vector: ";
