@@ -1,5 +1,5 @@
 #pragma once
-
+#include <list>
 #include <stack>
 #include <iostream>
 #include <iterator>
